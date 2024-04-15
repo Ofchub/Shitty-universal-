@@ -1,0 +1,86 @@
+
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/qwdPKKDN"))()
+local venyx = library.new("HAMEWARE", 5013109572)
+
+local themes = {
+   Background = Color3.fromRGB(24, 24, 24),
+   Glow = Color3.fromRGB(0, 0, 0),
+   Accent = Color3.fromRGB(10, 10, 10),
+   LightContrast = Color3.fromRGB(20, 20, 20),
+   DarkContrast = Color3.fromRGB(14, 14, 14),
+   TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+--Coded by Tyris & Doiv (void)
+local mouse = game.Players.LocalPlayer:GetMouse()
+local BodyParts = {'LeftFoot', 'LeftHand', 'LeftLowerArm', 'LeftLowerLeg', 'LeftUpperArm', 'LeftUpperLeg', 'LowerTorso', 'RightFoot', 'RightHand', 'RightLowerArm', 'RightLowerLeg', 'RightUpperLeg', 'RightUpperArm', 'UpperTorso', 'Head'}
+local invitecode = ""
+local HAMEWARE_Chatspam = {"HAMEWARE ON TOP!", "OWNING ANY OTHER CHEAT THEN HAMEWARE MAKES YOU AN IDIOT LIBERAL", "HAMEWARE PENCE 2020", "HAMEWARE WINNING", "GET GOOD GET HAMEWARE", "discoard.gg/"..invitecode.." discoard.gg/"..invitecode.." discoard.gg/"..invitecode.." discoard.gg/"..invitecode.." discoard.gg/"..invitecode.." discoard.gg/"..invitecode.." discoard.gg/"..invitecode.." discoard.gg/"..invitecode.." discoard.gg/"..invitecode, "HAMEWARE | TWO STUDS AHEAD OF THE GAME"}
+local Furry_Chatspam = {'UwU Sowwiez! Im using hameware and owning youwww </3', 'OwO hameware is tapping aww of youw fwiends :c', 'e.e you arent using hameware?? Dat makes meh angerye!! >:c', '>.< I am tapping eyes closed with hameware~', ':3 come get hameware! discoard.gg/'..invitecode, 'OvO hameware is slotted!! C:', 'UvU no challenge for hameware! </3'}
+local Swiss_Chatspam = {'SalÃ¼ zÃ¤mme Ig bin en schwiizer.', 'Hei u-huara dreck isch denn da imfall', 'Ier sing alli extrem schlecht i dem spiil lol', 'Wa wennd ier eigentlich, ich bin eh besser also leafet doch???', 'Han kei bock meh gege euch spiele, ier sind alli extrem schlecht', 'Boah alter in zuri hets boes fuetz!', 'Ig schwoer hameware isch immer ontop!', 'Hameware isch de best script wo nid full-public isch', 'holl der doch hameware! discord.gg/'..invitecode}
+local HvH_Chatspam = {"HHHHHH D0g owned by Hameware user hhh", "No Hameware no talk dog LLLL", "hhhh imagine not owning hameware NN dog 2k20 Hamewareless", "come 5v5 dumb dog", "Absolute dog hhhh no Hameware no talk nn", "I'm hvh legende so shhhh", "hdf eins du hs", 'einsclick hdf hund', 'schnauze nn ich bin hvh legende', 'Hvh legend here', 'Hameware hameware nr #1 cheat', 'Antiaim top of the game'}
+local China_Chatspam = {"HAMEWAREæä½³", "HAMEWAREä¸è¡£", "èæ¬é»å®¢è½¯ä»¶", "äºé©¬é", "æ·éè", "æåæºé»å®¢hameware", "å¤©å®é¨å¹¿åºæ¯åçï¼ä¸é¢æhameware, tianamen square", "ä¹æ²»Â·å¼æ´ä¼å¾·", "ç·äººå¥³äººç«ä¸­å½é¡¶", "å¯æçé»äºº", "æ¯ç²è´´è½¯ä»¶", "xå¼å¾", "æ°´å°ç", "é´èææ¯", "é»è²çæ´»æ æè°BLM", "femboyesæ¯åæ§æ"}
+local uion = true
+local circle = Drawing.new("Circle")
+local LP = game:GetService("Players").LocalPlayer
+circle.Visible = false
+local fakeanim = Instance.new('Animation', workspace)
+fakeanim.AnimationId = 'rbxassetid://0'
+local userInputService = game:GetService("UserInputService")
+userInputService.MouseBehavior = Enum.MouseBehavior.Default
+
+local target;
+local bodyname;
+local ChatDebounce = false
+local NameTags_Toggled = false
+local ArmChams = false
+local WeaponChams = false
+local ArmMaterial = 'Plastic'
+local WeaponMaterial = 'Plastic'
+local debris = game:GetService("Workspace").Debris
+local SilentAimFOV_Thickness = 1
+local Show_SILENTAIMFOV = false
+local CollectDebris = false
+local SilentAim_Toggled = false
+local NoAnims_Toggle = false
+local Teamcheck_Toggled = false
+local Visuals_Toggled = false
+local Chams_Toggled = false
+local SilentAimFOV_Filled = false
+local AntiAim_Toggle = false
+local isthirdperson = false
+local ChatSpam = false
+local Movement_Toggled = false
+local Bhop_Toggled = false
+local Chatspam_Toggled = false
+local Bhop_Speed = 1
+local Chatspam_Wait = 1
+local Chatspam_Type = nil
+local SilentAim_FOV = 0
+local SilentAimFOV_Transparency = 0
+local silentaim_headhitchance = 0
+local silentaim_bodyhitchance = 0
+local Pitch_Type = nil
+local Yaw_Type = nil
+local AntiAim_Speed = 0
+local CustomPitch_Value = 0
+local ArmChams_Color = Color3.new(50, 50, 50)
+local WeaponChams_Color = Color3.new(50, 50, 50)
+local SilentAimFOV_Numsides = 3
+local CustomYaw_Value = 0
+local leftrotation = CFrame.new(-150, 0, 0)
+local rightrotation = CFrame.new(150, 0, 0)
+local backrotation = CFrame.new(-4, 0, 0)
+local ChamsColor = Color3.fromRGB(50, 50, 50)
+local SilentAimFOV_Color = Color3.fromRGB(50, 50, 50)
+local defaultvector = Vector2.new(workspace.CurrentCamera.ViewportSize.X / 2, workspace.CurrentCamera.ViewportSize.Y / 2)
+local hed = Instance.new('Part', workspace.Terrain)
+local rhead = Instance.new('Part', hed)
+local rtors = Instance.new('Part', hed)
+rhead.Name = "Head"
+rtors.Name = 'UpperTorso'
+
+local page = venyx:addPage("Aimbot", 5892773989)
+local section1 = page:addSection("Silent Aimbot")
+local section2 = page:addSection
